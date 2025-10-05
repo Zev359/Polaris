@@ -7,7 +7,7 @@ import datetime
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import queue
-#git test
+print('commit test')#git test
 SCREENSHOT_FOLDER = os.path.expanduser(r"~\\Pictures\\Screenshots")
 
 markers = []
@@ -20,7 +20,6 @@ screenshot_queue = queue.Queue()
 
 # --- Deduplication set: path + modified time ---
 processed_screenshots = set()  # (path, mtime)
-
 def get_latest_screenshot():
     files = glob.glob(os.path.join(SCREENSHOT_FOLDER, "*.png"))
     if not files:
